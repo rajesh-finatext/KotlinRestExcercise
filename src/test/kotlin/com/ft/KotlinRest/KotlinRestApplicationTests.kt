@@ -24,4 +24,9 @@ class KotlinRestApplicationTests {
 		Assert.assertEquals("FF0000", Color().getRed())
 	}
 
+	@Test
+	fun getNumTest() {
+		Assert.assertEquals(1, 2)
+	}
+
 }
