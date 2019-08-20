@@ -19,6 +19,4 @@ class Endpoints {
         }
         return Greeting(counter.get(), "Hello, $name", names.joinToString())
     }
-
-
 }
