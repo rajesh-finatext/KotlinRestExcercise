@@ -11,7 +11,6 @@ pipeline {
             steps {
                 // sh './gradlew bootRun'
                 sh 'bash ./scripts/deploy.sh > /dev/null &'
-                sh 'sleep 1m'
                 sh 'bash ./scripts/healthCheck.sh'
             }
         }
