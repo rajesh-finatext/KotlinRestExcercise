@@ -11,9 +11,8 @@ pipeline {
             steps {
                 // sh './gradlew bootRun'
                 sh 'bash ./scripts/deploy.sh > /dev/null &'
-                timeout(time: 2, unit: 'MINUTES') {
-                    sh 'bash ./scripts/healthCheck.sh'
-                }
+                sh 'sleep 1m'
+                sh 'bash ./scripts/healthCheck.sh'
             }
         }
     }
