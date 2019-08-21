@@ -4,9 +4,13 @@ pipeline {
         stage('build') {
             steps {
                 sh './gradlew clean'
-                sh './gradlew test --stacktrace'
-                sh './gradlew build'
+                sh './gradlew build --warning-mode all'
             }   
+        }
+        stage('Deploy') {
+            steps {
+                sh './gradlew bootRun'
+            }
         }
     }
 }
